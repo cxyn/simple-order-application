@@ -30,7 +30,7 @@
       label="数量"
       show-overflow-tooltip>
       <template slot-scope="scope">
-        <el-input-number v-model="scope.row.num" @change="handleChange()" :min="1" :max="10" label="描述文字"></el-input-number>
+        <el-input-number v-model="scope.row.num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
       </template>
     </el-table-column>
 
