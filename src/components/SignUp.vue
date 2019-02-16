@@ -104,10 +104,14 @@
   text-align: left;
 }
 .signup {
-  width: 60%;
-  margin: 0 auto;
+    width: 60%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    padding-top: 50px;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,.05);
 }
 .signupAction .el-form-item__content{
   text-align: center;
+  margin-left: 0 !important;
 }
 </style>
