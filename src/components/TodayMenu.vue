@@ -1,50 +1,48 @@
 <template>
-  <div id="app">
-    <el-container class="todayMenu">
-      <el-header>今日菜单</el-header>
-      <el-main>
-        <el-table
-        ref="multipleTable"
-        :data="menuList"
-        tooltip-effect="dark"
-        style="width: 100%"
-        @selection-change="handleSelectionChange">
+  <el-container class="todayMenu">
+    <el-header>今日菜单</el-header>
+    <el-main>
+      <el-table
+      ref="multipleTable"
+      :data="menuList"
+      tooltip-effect="dark"
+      style="width: 100%"
+      @selection-change="handleSelectionChange">
 
-        <el-table-column
-          type="selection"
-          width="55">
-        </el-table-column>
+      <el-table-column
+        type="selection"
+        width="55">
+      </el-table-column>
 
-        <el-table-column
-          label="套餐"
-          width="120">
-          <template slot-scope="scope">{{ scope.row.name }}</template>
-        </el-table-column>
+      <el-table-column
+        label="套餐"
+        width="120">
+        <template slot-scope="scope">{{ scope.row.name }}</template>
+      </el-table-column>
 
-        <el-table-column
-          prop="price"
-          label="价格"
-          width="120">
-        </el-table-column>
+      <el-table-column
+        prop="price"
+        label="价格"
+        width="120">
+      </el-table-column>
 
-        <el-table-column
-          prop="num"
-          label="数量"
-          show-overflow-tooltip>
-          <template slot-scope="scope">
-            <el-input-number v-model="scope.row.num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
-          </template>
-        </el-table-column>
+      <el-table-column
+        prop="num"
+        label="数量"
+        show-overflow-tooltip>
+        <template slot-scope="scope">
+          <el-input-number v-model="scope.row.num" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number>
+        </template>
+      </el-table-column>
 
-      </el-table>
-      </el-main>
-      <el-footer>
-        <div style="margin-top: 20px">
-          <el-button type="primary" round @click="submitOrder()">提交订单</el-button>
-        </div>
-      </el-footer>
-    </el-container>
-  </div>
+    </el-table>
+    </el-main>
+    <el-footer>
+      <div style="margin-top: 20px">
+        <el-button type="primary" round @click="submitOrder()">提交订单</el-button>
+      </div>
+    </el-footer>
+  </el-container>
 </template>
 
 <script>

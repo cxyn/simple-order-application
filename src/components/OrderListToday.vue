@@ -1,5 +1,4 @@
 <template>
-  <div id="app">
     <el-container class="todayOrderList">
       <el-header>今日点餐列表</el-header>
       <el-main>
@@ -28,7 +27,6 @@
         </el-table>
       </el-main>
     </el-container>  
-  </div>
 </template>
 
 <script>
@@ -42,49 +40,49 @@
       return {
         tableData2: [
           {
-            personName: '王云霄',
+            personName: '张三',
             setName: '素菜',
             num: 1,
             cost: '10.00' 
           },
           {
-            personName: '王云霄',
+            personName: '李四',
             setName: '鱼香肉丝',
             num: 1,
             cost: '12.00' 
           },
           {
-            personName: '王云霄',
+            personName: '贝克汉姆',
             setName: '京酱肉丝',
             num: 1,
             cost: '12.00' 
           },
           {
-            personName: '王云霄',
+            personName: 'C罗',
             setName: '京酱肉丝',
             num: 1,
             cost: '12.00' 
           },
           {
-            personName: '王云霄',
+            personName: '拉什福德',
             setName: '京酱肉丝',
             num: 1,
             cost: '12.00' 
           },
           {
-            personName: '王云霄',
+            personName: '瓦伦西亚',
             setName: '京酱肉丝',
             num: 1,
             cost: '12.00' 
           },
           {
-            personName: '王云霄',
+            personName: '卢克肖',
             setName: '京酱肉丝',
             num: 1,
             cost: '12.00' 
           },
           {
-            personName: '王云霄',
+            personName: '桑切斯',
             setName: '京酱肉丝',
             num: 1,
             cost: '12.00' 

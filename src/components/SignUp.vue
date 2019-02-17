@@ -1,36 +1,34 @@
 <template>
-  <div id="app">
-    <el-container class="signup">
-      <el-header>账户注册</el-header>
-      <el-main>
-        <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-          <el-form-item label="用户名" prop="username">
-            <el-input v-model="ruleForm.username"></el-input>
-          </el-form-item>
-          <el-form-item label="密码" prop="password">
-            <el-input type="password" v-model="ruleForm.password"></el-input>
-          </el-form-item>
-          <el-form-item label="重复密码" prop="checkPassword">
-            <el-input type="password" v-model="ruleForm.checkPassword"></el-input>
-          </el-form-item>
-          <el-form-item label="真实姓名" prop="fullName">
-            <el-input v-model="ruleForm.fullName"></el-input>
-          </el-form-item>
-          <el-form-item label="性别" prop="sex">
-            <el-select v-model="ruleForm.sex" placeholder="请选择性别">
-              <el-option label="帅哥" value="male"></el-option>
-              <el-option label="美女" value="female"></el-option>
-            </el-select>
-          </el-form-item>
+  <el-container class="signup">
+    <el-header>账户注册</el-header>
+    <el-main>
+      <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+        <el-form-item label="用户名" prop="username">
+          <el-input v-model="ruleForm.username"></el-input>
+        </el-form-item>
+        <el-form-item label="密码" prop="password">
+          <el-input type="password" v-model="ruleForm.password"></el-input>
+        </el-form-item>
+        <el-form-item label="重复密码" prop="checkPassword">
+          <el-input type="password" v-model="ruleForm.checkPassword"></el-input>
+        </el-form-item>
+        <el-form-item label="真实姓名" prop="fullName">
+          <el-input v-model="ruleForm.fullName"></el-input>
+        </el-form-item>
+        <el-form-item label="性别" prop="sex">
+          <el-select v-model="ruleForm.sex" placeholder="请选择性别">
+            <el-option label="帅哥" value="male"></el-option>
+            <el-option label="美女" value="female"></el-option>
+          </el-select>
+        </el-form-item>
 
-          <el-form-item class="signupAction">
-            <el-button type="primary" @click="submitForm('ruleForm')">立即提交</el-button>
-            <el-button @click="resetForm('ruleForm')">重置</el-button>
-          </el-form-item>
-        </el-form>
-      </el-main>
-    </el-container>
-  </div>
+        <el-form-item class="signupAction">
+          <el-button type="primary" @click="submitForm('ruleForm')">立即提交</el-button>
+          <el-button @click="resetForm('ruleForm')">重置</el-button>
+        </el-form-item>
+      </el-form>
+    </el-main>
+  </el-container>
 </template>
 
 <script>
