@@ -4,7 +4,11 @@ import TodayMenu from '@/components/TodayMenu'
 import OrderListToday from '@/components/OrderListToday'
 import SignUp from '@/components/SignUp'
 import SignIn from '@/components/SignIn'
-import AdminIndex from '@/components/admin/index'
+import AdminIndex from '@/components/admin/Index'
+import OrderList from '@/components/admin/OrderList'
+import UserList from '@/components/admin/Userlist'
+import MenuList from '@/components/admin/MenuList'
+import AddMenu from '@/components/admin/MenuAdd'
 
 Vue.use(Router)
 
@@ -34,6 +38,26 @@ export default new Router({
       path: '/admin/index',
       name: 'index',
       component: AdminIndex
+    },
+    {
+      path: '/admin/orderList',
+      name: 'orderList',
+      component: OrderList
+    },
+    {
+      path: '/admin/user',
+      name: 'userList',
+      component: UserList
+    },
+    {
+      path: '/admin/menuList',
+      name: 'menuList',
+      component: MenuList
+    },
+    {
+      path: '/admin/addMenu',
+      name: 'addMenu',
+      component: AddMenu
     }
 
   ]
