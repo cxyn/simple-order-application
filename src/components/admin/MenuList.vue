@@ -37,7 +37,7 @@
           </el-menu>
         </el-col>
         <el-col :span="8">
-          这里是用户列表内容
+          这里是菜单列表内容
         </el-col>
       </el-row>
     </el-main>

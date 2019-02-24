@@ -5,7 +5,7 @@
       <el-row class="tac">
         <el-col :span="4">
           <el-menu
-            default-active="2"
+            default-active="1"
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
@@ -14,11 +14,11 @@
             active-text-color="#ffd04b">
             <el-menu-item index="1">
               <i class="el-icon-menu"></i>
-              <span slot="title">用户管理</span>
+              <span slot="title"><router-link to="/admin/user">用户管理</router-link></span>
             </el-menu-item>
             <el-menu-item index="2">
               <i class="el-icon-menu"></i>
-              <span slot="title">订单管理</span>
+              <span slot="title"><router-link to="/admin/orderList">订单管理</router-link></span>
             </el-menu-item>
 
             <el-submenu index="3">
@@ -27,13 +27,10 @@
                 <span>菜单管理</span>
               </template>
               <el-menu-item-group>
-                <el-menu-item index="3-1">菜单列表</el-menu-item>
-                <el-menu-item index="3-2">增加菜单</el-menu-item>
+                <el-menu-item index="3-1"><router-link to="/admin/menuList">菜单列表</router-link></el-menu-item>
+                <el-menu-item index="3-2"><router-link to="/admin/addMenu">增加菜单</router-link></el-menu-item>
               </el-menu-item-group>
             </el-submenu>
-
-
-
           </el-menu>
         </el-col>
         <el-col :span="8">
@@ -69,5 +66,9 @@
 #app {
   font-family: Helvetica, sans-serif;
   text-align: center;
+}
+.el-menu-item a {
+    color: #fff;
+    text-decoration: none;
 }
 </style>
