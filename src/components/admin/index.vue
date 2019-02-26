@@ -1,9 +1,9 @@
 <template>
   <el-container>
-    <el-header></el-header>
+    <el-header>头部</el-header>
     <el-main>
       <el-row class="tac">
-        <el-col :span="4">
+        <el-col :span="4" style="min-height: 100vh;background-color: rgb(84, 92, 100);">
           <el-menu
             default-active="1"
             class="el-menu-vertical-demo"
@@ -33,7 +33,7 @@
             </el-submenu>
           </el-menu>
         </el-col>
-        <el-col :span="8">
+        <el-col style="display: flex;background-color: #f1f1f1;padding-left: 20px;">
           这里是管理首页内容
         </el-col>
       </el-row>
@@ -71,4 +71,17 @@
     color: #fff;
     text-decoration: none;
 }
+.tac {
+  display: flex;
+}
+.el-menu {
+  border-right: 0;
+}
+.el-header {
+  background-color: rgb(80, 78, 87);
+}
+.el-main {
+  padding: 0;
+}
+
 </style>
