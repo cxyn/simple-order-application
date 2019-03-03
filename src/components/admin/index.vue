@@ -3,36 +3,7 @@
     <el-header>头部</el-header>
     <el-main>
       <el-row class="tac">
-        <el-col :span="4" style="min-height: 100vh;background-color: rgb(84, 92, 100);">
-          <el-menu
-            default-active="1"
-            class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
-            background-color="#545c64"
-            text-color="#fff"
-            active-text-color="#ffd04b">
-            <el-menu-item index="1">
-              <i class="el-icon-menu"></i>
-              <span slot="title"><router-link to="/admin/user">用户管理</router-link></span>
-            </el-menu-item>
-            <el-menu-item index="2">
-              <i class="el-icon-menu"></i>
-              <span slot="title"><router-link to="/admin/orderList">订单管理</router-link></span>
-            </el-menu-item>
-
-            <el-submenu index="3">
-              <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>菜单管理</span>
-              </template>
-              <el-menu-item-group>
-                <el-menu-item index="3-1"><router-link to="/admin/menuList">菜单列表</router-link></el-menu-item>
-                <el-menu-item index="3-2"><router-link to="/admin/addMenu">增加菜单</router-link></el-menu-item>
-              </el-menu-item-group>
-            </el-submenu>
-          </el-menu>
-        </el-col>
+        <Navi></Navi>
         <el-col style="display: flex;background-color: #f1f1f1;padding-left: 20px;">
           这里是管理首页内容
         </el-col>
@@ -42,11 +13,15 @@
 </template>
 
 <script>
+  import Navi from './Navi.vue'
   export default {
     data() {
       return {
         msg: ''
       }
+    },
+    components: {
+      Navi
     },
     mounted: function() {
 

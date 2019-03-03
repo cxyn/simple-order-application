@@ -33,6 +33,15 @@
 
 <script>
 export default {
+  props: {
+    currentIndex: {
+      type: Number,
+      default: 1
+    }
+  },
+  methods: {
+    
+  }
 }
 </script>
 
