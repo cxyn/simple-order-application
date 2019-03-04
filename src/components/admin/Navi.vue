@@ -3,13 +3,11 @@
     <el-menu
       default-active="1"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b">
       <el-menu-item index="1">
-        <i class="el-icon-menu"></i>
+        <i class="el-icon-bell"></i>
         <span slot="title"><router-link to="/admin/user">用户管理</router-link></span>
       </el-menu-item>
       <el-menu-item index="2">
@@ -34,13 +32,14 @@
 <script>
 export default {
   props: {
-    currentIndex: {
+    current: {
       type: Number,
-      default: 1
+      default: () => {}
     }
   },
+  
   methods: {
-    
+
   }
 }
 </script>

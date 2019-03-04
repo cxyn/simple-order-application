@@ -1,47 +1,18 @@
 <template>
   <el-container>
-    <el-header></el-header>
+    <el-header>头部</el-header>
     <el-main>
       <el-row class="tac">
-        <el-col :span="4">
-          <el-menu
-            default-active="2"
-            class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
-            background-color="#545c64"
-            text-color="#fff"
-            active-text-color="#ffd04b">
-            <el-menu-item index="1">
-            <i class="el-icon-menu"></i>
-            <span slot="title"><router-link to="/admin/user">用户管理</router-link></span>
-            </el-menu-item>
-            <el-menu-item index="2">
-            <i class="el-icon-menu"></i>
-            <span slot="title"><router-link to="/admin/orderList">订单管理</router-link></span>
-            </el-menu-item>
-
-            <el-submenu index="3">
-            <template slot="title">
-                <i class="el-icon-location"></i>
-                <span>菜单管理</span>
-            </template>
-            <el-menu-item-group>
-                <el-menu-item index="3-1"><router-link to="/admin/menuList">菜单列表</router-link></el-menu-item>
-                <el-menu-item index="3-2"><router-link to="/admin/addMenu">增加菜单</router-link></el-menu-item>
-            </el-menu-item-group>
-            </el-submenu>
-          </el-menu>
-        </el-col>
-        <el-col :span="8">
+        <Navi :current='1'></Navi>
+        <el-col style="display: flex;background-color: #f1f1f1;padding-left: 20px;">
           这里是订单列表内容
         </el-col>
       </el-row>
     </el-main>
   </el-container>
 </template>
-
 <script>
+  import Navi from './Navi.vue'
   export default {
     data() {
       return {
@@ -52,12 +23,7 @@
 
     },
     methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
+
     }
   }
 </script>

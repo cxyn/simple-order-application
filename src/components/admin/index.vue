@@ -3,7 +3,7 @@
     <el-header>头部</el-header>
     <el-main>
       <el-row class="tac">
-        <Navi></Navi>
+        <Navi :current='1'></Navi>
         <el-col style="display: flex;background-color: #f1f1f1;padding-left: 20px;">
           这里是管理首页内容
         </el-col>
@@ -27,12 +27,7 @@
 
     },
     methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
+
     }
   }
 </script>
